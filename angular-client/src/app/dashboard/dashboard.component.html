@@ -1,0 +1,19 @@
+<div class="d-flex justify-content-center" id="dashboard-wrapper">
+    <div>
+        <div class="row d-flex justify-content-center text-center">
+            <p class="mt-5">dashboard works!</p>
+        </div>
+        <div *ngIf="displayUserData">
+            <b>User id:</b>
+            <div class="mt-1">{{ displayUserData.user.id }}</div> <!-- (4) Show user id -->
+            <br>
+
+            <b>User e-mail:</b>
+            <div class="mt-1">{{ displayUserData.user.email }}</div> <!-- (4) Show user e-mail -->
+            <br>
+
+            <b>User password:</b>
+            <div class="mt-1">{{ displayUserData.user.password }}</div> <!-- (4) Show user password -->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div id="header-wrapper">
+    <div class="max-width">
+        <mat-toolbar>
+            <span>My app</span>
+            <span class="example-spacer"></span>
+            <button *ngIf="!authService.loggedIn()" mat-button routerLink="/sign-in" routerLinkActive="active" class="btn-sign-in me-2">Sign in</button>
+            <button *ngIf="!authService.loggedIn()" mat-stroked-button routerLink="/sign-up" routerLinkActive="active" class="btn-sign-up">Sign up</button>
+            
+            <button *ngIf="authService.loggedIn()" mat-button routerLink="/log-out" routerLinkActive="active" (click)="authService.logOut()">Sign out</button>
+        </mat-toolbar>
+    </div>
+</div>
